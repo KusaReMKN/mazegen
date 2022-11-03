@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>迷路ジェネレータ</title>
+<script src="./js/maze.js" defer></script>
+</head>
+<body>
+<h1>迷路ジェネレータ</h1>
+<fieldset>
+<legend>迷路を生成する</legend>
+<label>幅:
+	<input type="number" id="mazewidth"></label>
+<label>高さ:
+	<input type="number" id="mazeheight"></label>
+<label>壁の色:
+	<input type="color" id="wallcolor" value="#ffffff"
+		pattern="#[0-9A-Fa-f]{6}" placeholder="#ffffff"></label>
+<label>道の色:
+	<input type="color" id="loadcolor" value="#000000"
+		pattern="#[0-9A-Fa-f]{6}" placeholder="#000000"></label>
+<label><input type="checkbox" id="narrowwall">
+	壁をうすくする</label>
+<label><input type="checkbox" id="animation">
+	生成過程を表示する</label>
+<button id="play">生成する</button>
+</fieldset>
+<canvas id="canvas"></canvas>
+<pre id="debug"></pre>
+</body>
+</html>
